@@ -71,7 +71,14 @@ h1, h2, h3, h4, h5, h6,
   position: relative;
   min-height: 100vh;
   padding: 120px 0 80px;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
   background: url('../images/hero-landscape.jpg') center/cover no-repeat;
+  opacity: 0.78;
 }
 
 .hero-overlay {
@@ -89,7 +96,7 @@ h1, h2, h3, h4, h5, h6,
 
 .hero-content {
   max-width: 920px;
-  background: rgba(30, 42, 35, 0.45);
+  background: rgba(30, 42, 35, 0.75);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   padding: 3rem 2rem;
@@ -322,4 +329,17 @@ h1, h2, h3, h4, h5, h6,
   .about-image {
     min-height: 280px;
   }
+}
+
+.troban-logo-footer-holder {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+.troban-logo-footer {
+  height: 80px !important;
 }
