@@ -280,6 +280,10 @@ h1, h2, h3, h4, h5, h6,
 }
 
 @media (max-width: 991.98px) {
+  #mainNav {
+    padding: 0.8rem 0;
+  }
+
   .hero-section {
     min-height: auto;
     padding: 140px 0 100px;
