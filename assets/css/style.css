@@ -1,9 +1,9 @@
 :root {
-  --primary: #5EB86E;
-  --primary-dark: #429654;
-  --primary-light: #edf8ef;
-  --text-dark: #1f2937;
-  --text-muted: #6b7280;
+  --primary: #5FB96A;
+  --primary-dark: #5FB96A;
+  --primary-light: rgba(95, 185, 106, 0.12);
+  --text-dark: #1E2A23;
+  --text-muted: rgba(30, 42, 35, 0.65);
   --bg-light: #f8fafc;
   --white: #ffffff;
   --shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
@@ -17,7 +17,7 @@ html {
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Outfit', sans-serif;
   color: var(--text-dark);
   line-height: 1.7;
   overflow-x: hidden;
@@ -26,32 +26,44 @@ body {
 h1, h2, h3, h4, h5, h6,
 .navbar-brand,
 .btn {
-  font-family: 'Montserrat', sans-serif;
+  font-family: inherit;
 }
 
 /* Navbar */
 #mainNav {
-  background: rgba(66, 150, 84, 0.95);
+  background: rgba(246, 250, 247, 0.96);
   backdrop-filter: blur(8px);
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-  padding: 0.85rem 0;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  padding: 0 0;
 }
 
 #mainNav .navbar-brand {
   font-size: 1.35rem;
   letter-spacing: 0.2px;
+  color: var(--primary-dark);
+}
+
+#mainNav .troban-logo {
+  display: block;
+  height: 60px;
+  width: auto;
+  max-width: 100%;
 }
 
 #mainNav .nav-link {
-  color: rgba(255, 255, 255, 0.85);
-  font-weight: 500;
+  color: var(--primary-dark);
+  font-weight: 600;
   padding: 0.5rem 1rem;
   transition: color 0.2s ease;
 }
 
 #mainNav .nav-link:hover,
 #mainNav .nav-link:focus {
-  color: #fff;
+  color: var(--primary);
+}
+
+#mainNav .navbar-toggler {
+  border-color: rgba(95, 185, 106, 0.4);
 }
 
 /* Hero */
@@ -65,7 +77,7 @@ h1, h2, h3, h4, h5, h6,
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(35, 70, 45, 0.72), rgba(94, 184, 110, 0.45));
+  background: linear-gradient(135deg, rgba(30, 42, 35, 0.72), rgba(95, 185, 106, 0.45));
 }
 
 .hero-eyebrow {
@@ -77,7 +89,7 @@ h1, h2, h3, h4, h5, h6,
 
 .hero-content {
   max-width: 920px;
-  background: rgba(20, 45, 32, 0.45);
+  background: rgba(30, 42, 35, 0.45);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   padding: 3rem 2rem;
@@ -98,8 +110,9 @@ h1, h2, h3, h4, h5, h6,
 
 .btn-primary:hover,
 .btn-primary:focus {
-  background-color: var(--primary-dark);
-  border-color: var(--primary-dark);
+  background-color: var(--primary);
+  border-color: var(--primary);
+  filter: brightness(0.92);
 }
 
 .text-primary {
@@ -140,7 +153,7 @@ h1, h2, h3, h4, h5, h6,
 /* Service cards */
 .service-card {
   background: var(--white);
-  border: 1px solid #e9eef2;
+  border: 1px solid rgba(30, 42, 35, 0.1);
   border-radius: var(--radius);
   padding: 2rem;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
@@ -175,13 +188,13 @@ h1, h2, h3, h4, h5, h6,
 
 .about-feature {
   font-weight: 600;
-  color: #374151;
+  color: var(--text-dark);
 }
 
 /* Why us */
 .why-card {
   background: var(--white);
-  border: 1px solid #e9eef2;
+  border: 1px solid rgba(30, 42, 35, 0.1);
   border-radius: var(--radius);
   padding: 2rem 1.5rem;
 }
@@ -202,7 +215,7 @@ h1, h2, h3, h4, h5, h6,
 /* CTA */
 .cta-banner {
   padding: 5rem 0;
-  background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+  background: var(--primary);
 }
 
 .cta-text {
@@ -218,7 +231,7 @@ h1, h2, h3, h4, h5, h6,
 /* Contact */
 .contact-card {
   background: var(--white);
-  border: 1px solid #e9eef2;
+  border: 1px solid rgba(30, 42, 35, 0.1);
   border-radius: var(--radius);
   padding: 2rem 1.5rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
@@ -239,7 +252,7 @@ h1, h2, h3, h4, h5, h6,
 
 /* Footer */
 .site-footer {
-  background: #2d5f39;
+  background: var(--text-dark);
   padding: 4rem 0 2rem;
 }
 
@@ -270,6 +283,10 @@ h1, h2, h3, h4, h5, h6,
   .hero-section {
     min-height: auto;
     padding: 140px 0 100px;
+  }
+
+  #mainNav .troban-logo {
+    height: 38px;
   }
 
   #mainNav .navbar-collapse {
